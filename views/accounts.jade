@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1.
+		List of All Accounts
+	ul
+		for account in accounts
+			li= account.username 
+			a(href="mailto:#{account.email}")= account.email
